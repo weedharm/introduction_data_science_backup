@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h3>Hello, {{ name }}!</h3>
+
+    <h3>Your device specifications:</h3>
+
+    <table>
+        <tr>
+            <th>RAM</th>
+            <th>V-RAM</th>
+            <th>Display</th>
+            <th>Resolution</th>
+            <th>SSD</th>
+            <th>HDD</th>
+        </tr>
+        <tr>
+            <td>{{ ram }}</td>
+            <td>{{ v_ram }}</td>
+            <td>{{ display }}</td>
+            <td>{{ resolution }}</td>
+            <td>{{ ssd }}</td>
+            <td>{{ hdd }}</td>
+        </tr>
+    </table>
+
+    <h1>Predicted price : {{ price }} VND </h1>
+
+{% endblock %}

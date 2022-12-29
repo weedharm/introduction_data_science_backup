@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Laptop Prices</h1>
+    <form action="/predict" method="post">
+      <input autocomplete="off" autofocus name="name" placeholder="Enter your name" type="text">
+      <select name="ram">
+          <option disable selected>RAM</option>
+          {% for ram in RAM %}
+            <option>{{ ram }}</option>
+          {% endfor %}
+      </select>
+      <select name="v_ram">
+          <option disable selected>V-RAM</option>
+          {% for v_ram in V_RAM %}
+            <option>{{ v_ram }}</option>
+          {% endfor %}
+      </select>
+      <select name="display">
+          <option disable selected>Display</option>
+          {% for display in DISPLAY %}
+            <option>{{ display }}</option>
+          {% endfor %}
+      </select>
+      <select name="resolution">
+          <option disable selected>Resolution</option>
+          {% for resolution in RESOLUTION %}
+            <option>{{ resolution }}</option>
+          {% endfor %}
+      </select>
+      <select name="ssd">
+          <option disable selected>SSD</option>
+          {% for ssd in SSD %}
+            <option>{{ ssd }}</option>
+          {% endfor %}
+      </select>
+      <select name="hdd">
+          <option disable selected>HDD</option>
+          {% for hdd in HDD %}
+            <option>{{ hdd }}</option>
+          {% endfor %}
+      </select>
+      <input type="submit">
+    </form>
+
+{% endblock %}
